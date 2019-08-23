@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task2的简历</title>
+        <base target="_blank"></base>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="一个纯HTML的个人简历" />
+        <meta name="keywords" content="简历、HTML" />
+        <meta http-equiv="Content-Language" content="zh-cn" />
+        
+    </head>
+    <body>
+        <!--用一个table内嵌2个table，解决简历表格不同规格问题-->
+        <table id="table_all" border="0px" align="center">
+            <caption>个人简历</caption>
+            <tr>
+                <td>
+            <table border="10px" align="center" id="table_1" width="800px" cellpadding="10px">
+                <tr align="center">
+                    <td>姓名</td><td>路人乙</td><td>籍贯</td><td>地方</td>
+                </tr>
+                <tr align="center">
+                    <td>出生日期</td><td>199x.xx.xx</td><td>民族</td><td>汉</td>
+                </tr>
+                <tr align="center">
+                    <td>手机</td><td>123456789</td><td>邮箱</td><td>123@ife.com</td>
+                </tr>
+                <tr align="center">
+                    <td>GitHub</td><td>https://github.com/xxx</td><td>其他博客地址</td><td>url</td>
+                </tr>
+            </table>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <table border="10px" id="table_2" width="800px" cellpadding="10px" align="center">
+                <tr>
+                    <td>
+                        教育背景
+                    </td>
+                    <!--为更具有适应性，在单元格内嵌div，便于修改和改变样式-->
+                    <td>
+                        <div>
+                            <p>
+                                <b>本科学校及时间</b><br />
+                                xxxxxx&nbsp;&nbsp;20xx-20xx
+                            </p>
+                            <p>
+                                <b>研究生学校及其时间</b><br />
+                                xxxxxx&nbsp;&nbsp;20xx-20xx
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        个人能力
+                    </td>
+                    <td>
+                        <div>
+                            <p>
+                                <b>技术能力水平</b><br />
+                                熟练掌握xxxx，能够运用xxx进行开发，会使用xxx完成与他人完成协助。
+                            </p>
+                            <p>
+                                <b>综合能力/自我评价</b><br />
+                                爱好xxx，擅长与他人协助，自主学习能力强，xxxxxx
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        项目经历
+                    </td>
+                    <td>
+                        <div>
+                            <p>
+                                <b>20xx-20xx年xxxx项目</b><br />
+                                本项目使用了xxx，本人承担了xx角色，项目达到了什么效果，本人在项目学到了什么。
+                            </p>
+                            <p>
+                                <b>20xx-20xx年xxxx项目</b><br />
+                                本项目使用了xxx，本人承担了xx角色，项目达到了什么效果，本人在项目学到了什么。
+                            </p>    
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            </td>
+            </tr>
+        </table>
+    </body>
+    <footer>
+        <div align="center">
+            <address>Wirtten&nbsp;&nbsp;by&nbsp;&nbsp;<a href="https://github.com/wen1ling">wen1ling</a></address>
+        </div>
+    </footer>
+</html>
