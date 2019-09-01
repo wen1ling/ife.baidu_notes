@@ -1,0 +1,40 @@
+body{
+    font-family: Arial,sans-serif,serif;
+}
+body {
+    background-color: rgba(121, 119, 169, 0.70);
+}
+h1 {
+    text-align: center;
+    color: #176bb2;
+}
+img[title="my avatar"] {
+    width: 200px;
+    height: 200px;
+}
+.img {
+    text-align: center;
+}
+article {
+    background-color: #1e8b9f;
+}
+article p {
+    text-indent: 5em;
+}
+p {
+    line-height:30px;
+}
+h2 {
+    color: powderblue;
+}
+.article {
+    font-style: italic;
+    text-indent: 2.5em;
+}
+/* 去除底部链接的下划线和使其居中。 */
+a {
+    text-decoration: none;
+}
+.author {
+    text-align: center;
+}
