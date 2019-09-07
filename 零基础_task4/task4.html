@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head lang="zn-CN">
         <base target="_blank"></base>
         <meta charset=UTF-8" />
         <meta name="description" content="一个纯HTML的个人简历" />
         <meta name="keywords" content="简历、HTML" />
-        <title>task2的简历</title>
+        <title>task4的简历</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
         <!-- 内容头部 -->
         <header>
-            <h1 align="center">个人简历</h1>
+            <div class="h1">
+                个人简历
+            </div>
+            <div class="img">
+                <a href="https://github.com/wen1ling"><img src="1.jpg" title="my avatar" alt="my avatar" /></a>
+            </div>
         </header>
         <!-- 内容组 -->
         <section>
@@ -18,16 +24,19 @@
                 <article>
                     <h2>基本信息</h2>
                     <p>
-                        <b>姓名</b>&nbsp;&nbsp;路人甲&nbsp;&nbsp;&nbsp;&nbsp;
+                        <b>姓名</b>&nbsp;&nbsp;路人甲
+                        <br />
                         <b>性别</b>&nbsp;&nbsp;男
                     </p>
                 </article>
                 <article>
                     <h2>联系方式</h2>
                     <p>
-                        <b>手机号</b>&nbsp;&nbsp;123456789&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>E-mail</b>&nbsp;&nbsp;123@ife.com&nbsp;&nbsp;&nbsp;&nbsp;
-                        <b>GitHub主页</b>&nbsp;&nbsp;https://github.com/xxx
+                        <b>手机号</b>&nbsp;&nbsp;123456789
+                        <br />
+                        <b>E-mail</b>&nbsp;&nbsp;123@ife.com
+                        <br />
+                        <b>GitHub主页</b>&nbsp;&nbsp;https://github.com/wen1ling
                     </p>
                 </article>
                 <article>
@@ -61,6 +70,7 @@
                         爱好xxx，擅长与他人协助，自主学习能力强，xxxxxx
                         </p>
                     </div>
+                </article>
                 <article>
                     <h2>项目经历</h2>
                     <div class="article">
@@ -83,11 +93,12 @@
                     <b>20xx年某杯&nbsp;&nbsp;&nbsp;&nbsp;20xx年某大赛</b>
                     </p>
                 </article>
+            <br />
         </section>
-    </body>
     <footer>
-        <div align="center">
+        <div class="author">
             <address>Written&nbsp;&nbsp;by&nbsp;&nbsp;<a href="https://github.com/wen1ling">wen1ling</a></address>
         </div>
     </footer>
+    </body>
 </html>

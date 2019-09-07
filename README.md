@@ -4,7 +4,7 @@
 
 ## 零基础_task2
 
-这个目录存放了[零基础学院task2](http://ife.baidu.com/course/detail/id/36)关于个人简历的任务文件，note.md为在这次任务中对HTML及其语义化的学习笔记。
+这个目录存放了[零基础学院task2](http://ife.baidu.com/course/detail/id/36)关于个人简历的任务文件，task2_note.md为在这次任务中对HTML及其语义化的学习笔记。[效果1](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task2/task2_h.html)、[效果2](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task2/task2_table.html)。
 
 ### 实现效果
 
@@ -13,9 +13,16 @@
 
 ## 零基础_task3
 
-这个目录存放了[零基础学院task3](http://ife.baidu.com/course/detail/id/37)关于在task2基础上用css增加色彩的任务文件，task3_note.md为本次任务对css简单的学习笔记，包括背景、文本、字体等简单应用。
+这个目录存放了[零基础学院task3](http://ife.baidu.com/course/detail/id/37)关于在task2基础上用css增加色彩的任务文件，task3_note.md为本次任务对css简单的学习笔记，包括背景、文本、字体等简单应用。[效果](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task3/task3.html)
 
 ### 实现效果
 
 并没有特别新颖的地方。
 
+## 零基础_task4
+
+这个目录存放了[零基础学院task4](http://ife.baidu.com/course/detail/id/38)关于在背景边框列表链接和选择器的任务文件，task4_note.md为本次对css链接、列表、边框、轮廓的学习笔记。[效果](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task4/task4.html)
+
+### 实现效果
+
+简单的边框，边距效果。简历模型初步完成。
