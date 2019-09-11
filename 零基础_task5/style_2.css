@@ -1,0 +1,45 @@
+body {
+    font-family: Arial,sans-serif,serif;
+    background-color: white;
+    margin: 10px;
+}
+ul {
+    list-style-type: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    float: left;
+    margin-right: 20px;
+}
+article{
+    float: left;
+    clear: both;
+    margin: 20px 0 0 20px;
+}
+div.content_1 {
+    padding-top: 20px;
+}
+header {
+    width: 180px;
+    height: 700px;
+    float: left;
+    background-color: #3f8ef9;
+    padding-top: 80px; 
+}
+h1{
+    text-align: center;
+}
+section {
+    float: left;
+}
+h3 {
+    display: block;
+    margin-top: 20px;
+}
+footer p {
+    text-align: center;
+    font-style: italic;
+}

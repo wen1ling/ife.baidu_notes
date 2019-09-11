@@ -1,0 +1,32 @@
+body {
+    font-family: Arial,sans-serif,serif;
+    background-color: white;
+    margin: 30px;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style-type: none; 
+}
+li {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+article {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    clear: both;
+}
+
+div.content_2 li{
+    float: left;
+    clear: both;
+}
+footer p {
+    text-align: center;
+    font-style: italic;
+}
