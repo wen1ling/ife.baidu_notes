@@ -11,24 +11,27 @@ ul {
     list-style-type: none;
 }
 header {
-    background-color: darkgray;
+    background-color: #666666;
     padding: 20px;
+    width: 2010px;
+    border-radius: 15px;
 }
 li {
     float: left;
     margin-right: 20px;
 }
 article {
-    width: 1080px;
+    width: 2050px;
     height: 150px;
     margin-top: 5px;
+    border: 1px solid #cccccc;
 }
 div.aside, div.content_1, div.content_2 {
     height: 150px;
     float: left;
 }
 div.aside {
-    background-color: gray;
+    background-color: #cccccc;
     width: 180px;
 }
 h2 {
@@ -47,8 +50,4 @@ div.content_2 ul li {
 h3 {
     display: block;
     margin-top: 15px;
-}
-footer p {
-    text-align: center;
-    font-style: italic;
 }
