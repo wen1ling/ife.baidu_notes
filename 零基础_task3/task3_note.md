@@ -180,8 +180,15 @@ p {white-space: nowrap;}
 ### 字体font-family
 
 * 目前尚未有一种方法确保web一致的使用一种字体。通用字体包括Serif、Sans-serif、Monospace、Cursive、Fantasy这五种系列。通用字体外可自行设置，但推荐保留一个通用字体，避免用户代理无此字体。
-
 * 推荐使用规则：UTF-8编码，lang为zh-CN，尽量指定通用字体，font-family推荐Arial, sans-serif，,GBK去掉sans-serif，西文字体在中文前，平台特有字体在通用前，generic family最后，特殊字体加引号。
+
+使用link为当前网页添加字体，
+
+```
+<link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
+```
+
+
 
 #### 字体样式font-style
 

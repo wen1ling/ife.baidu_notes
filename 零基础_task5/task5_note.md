@@ -1,10 +1,10 @@
 # CSS
 
-## 框模型
+## 盒模型
 
 如W3C图，规定了内外边距、边框以及元素宽高的方式。
 
-![ct_boxmodel](A:\github\ife.baidu_note\零基础_task5\ct_boxmodel.gif)
+![ct_boxmodel](ct_boxmodel.gif)
 
 **内边距padding**，可按照上、右、下、左的顺序设置内边距，也可统一设置。
 
@@ -15,6 +15,11 @@ h1 {padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 
 
 **外边距margin**，和内边距padding一样，可简写可分别设置。外边距存在合并的设置，当两者垂直外边距相遇时，将只会显示一个外边距，而其高度为要合并的两者较大者。在存在外边距margin的地方，不论是何种位置，均会合并。但是行内框、浮动框或相对定位不会存在合并。
 
+**块状盒子和行内盒子**：
+
+* 行内盒子：盒子不会换行，width、height不会起作用，margin、padding、border起作用但是不会分离其他行内盒子。
+* 块状盒子：盒子占用父容器所有空间，会换行，width、height起作用，padding、margin、border会把其他元素与当前盒子分离。
+
 ## 浮动布局float
 
 简而言之，就是框可以移动，直到触碰框的边缘，为float属性。
@@ -23,12 +28,37 @@ h1 {padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 
 
 ```
 ul {float: left; }
-ul {float: left; clear: both;}      可用来去除浮动，clear可有left、right、both几种选择。
+ul {float: left; clear: both;}      可用来控制浮动，clear可有left、right、both几种选择。
 ```
 
 对于设置菜单栏、不同内容并列的块都有很好效果。
 
 默认情况下浮动就像是一个框接着一个框，由于分辨率不同，所以不同分辨率可能有着不同的效果。
+
+**清除浮动**
+
+* clearfix hack清除浮动，块之间一致。（IE6只需zoom:1;）
+
+```
+.clearfix {overflow: auto;}
+```
+
+* 百分比布局
+
+```
+nav {float: left; width: 25%;}
+section {margin-left: 25%;}
+```
+
+* inline-block形式实现浮动：这种方式后面的不再需要使用clear清除浮动。
+
+```
+.box{display:inline-block; width:200px; height:100px; margin:1em;}
+```
+
+* 媒体查询
+
+通过响应式设计针对不同浏览器和设备表现不同的显示效果。[MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries)。
 
 ## 定位position
 
@@ -38,7 +68,9 @@ ul {float: left; clear: both;}      可用来去除浮动，clear可有left、ri
 
 分为几种类型。
 
-* absolute：绝对定位，相对于static，left、top、right、bottom。
+* static：静态定位，并没有变化，放入正常的文档流。
+
+* absolute：绝对定位，相对于最近的父元素，left、top、right、bottom。
 * fixed：绝对定位，相对于浏览器窗口定位，left、top、right、bottom。
 * relative：相对定位，left等等。
 
@@ -57,6 +89,14 @@ img {position: absolute; clip: rect(0px,60px,200px;0px);}
 ```
 img {position: absolute; left: 0px; z-index: -1;}
 ```
+
+* 特别的，黏性定位，在元素跨越某个值前为相对定位，跨越后为固定定位。
+
+```
+#one {position: sticky; top: 10px;}
+```
+
+
 
 ## display
 
@@ -114,7 +154,7 @@ img.hover {opacity: 1.0; filter: alpha(opacity=100);}
 
 ## 其他的东西
 
-* 对齐，可有text-align、margin、position、float几种方式。
+* 对齐，可有text-align、margin、position、float几种方式。还有display的table-cell。
 * 尺寸，推荐px、em，百分比对于不同分辨率的设备效果各异。
 
 

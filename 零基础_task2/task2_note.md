@@ -36,6 +36,29 @@ HTML 4.01
 
 ## 头部
 
+* link 
+
+```
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+插入网站图标
+<link rel="stylesheet" href="my-css-file.css">
+插入css文件
+<script src="my-js-file.js"></script>
+插入js文件
+```
+
+### lang 语言
+
+不仅是
+
+```
+<html lang="en-us">
+```
+
+很多标签例如span单设置每一部分内容语言也可以。
+
+框架
+
 ```
 <head>
 <title>文档标题</title>
@@ -58,7 +81,8 @@ HTML 4.01
 ## 部分文本标签
 
 ```
-<hr />                    水平线分隔文章不同内容  
+<hr />                    水平线分隔文章不同内容
+<br />					  换行
 <em></em>                 斜体，语义化为侧重点的强调
 <strong></strong>         内容重要性，渲染为粗体
 <i>/<i>                   斜体，语义化可搭配class/lang，表示名词，外来语等
@@ -71,7 +95,7 @@ HTML 4.01
 <kbd>输入内容/按键</kbd>  <mark>相关内容，高亮显示</mark>     
 <del>与<ins>                    datetime与cite，用于记录文档修改
 <pre></pre>                    等宽显示，适用于代码片段，
-<abbr title"需要显示的全称">缩写</abbr>     对缩写内容提示全称
+<abbr title="需要显示的全称">缩写</abbr>     对缩写内容提示全称
 ```
 
 ```
@@ -92,6 +116,41 @@ cite标签常用于参考文献、引用，有隐藏功能，可作为脚注或�
 <dfn><abbr title="">某个名词</abbr></dfn>     附近存在这个名词的定义
 <ruby>汉字<rp>(</rp><rt>拼音</rt><rp>)</rp>          显示汉字及其拼音，标示
 <span class=""></span>            有选择不应该选择这个
+```
+
+### 计算机代码更好的展示方式
+
+* code 标记通用代码
+* pre 严格的格式，通常是代码块（通常是作为大块，包括其他几个）
+* var 标记变量名
+* kbd 标记键盘输入（例如linux命令行）
+* samp 标记计算机的输出
+
+```
+<pre><code>const para = document.querySelector('p');
+
+para.onclick = function() {
+  alert('噢，噢，噢，别点我了。');
+}</code></pre>
+
+<p>请不要使用 <code>&lt;font&gt;</code> 、 <code>&lt;center&gt;</code> 等表象元素。</p>
+
+<p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
+
+
+<p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
+
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+```
+
+### 时间与日期
+
+不仅一种格式，设置更多是为了被抓取
+
+```
+<time datetime="2016-01-20">2016年1月20日</time>
 ```
 
 
@@ -124,7 +183,7 @@ download部分浏览器不支持，target:blank新窗口打开、self当前界�
 
 `<img />      当需要src为空时正确写法，避免重复载入`
 
-关于图像映射（ismap、usemap）
+### 关于图像映射
 
 * ismap   服务器端图像映射，点击某处通过服务器端响应
 
@@ -148,6 +207,51 @@ shape="circle", coords="x,y,r"      圆形，x,y圆心位置,r半径
 shape="rectangle", coords="x1,y1,x2,y2"   矩形，两个成对角的点坐标，可简写为rect
 shape="polygon", coords="x1,y1,x2,y2,等等"   多边形，每个坐标应该顶点，过于繁琐。
 ```
+
+### css关于图片的响应式设计
+
+通过css的设计来去应对不同分辨率导致的图片效果不好的现象，
+
+```
+<meta name="viewport" content="width=device-width">    强制手机浏览器真实窗口加载
+```
+
+1. 根据分辨率
+
+```
+<img srcset="xxx-1.jpg 320w,
+             xxx-2.jpg 480w,
+             xxx-3.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+```
+
+2. 使用css预定宽度，然后srcset用倍数放大或缩小
+
+```
+<img srcset="elva-fairy-320w.jpg,
+             elva-fairy-480w.jpg 1.5x,
+             elva-fairy-640w.jpg 2x"
+     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+css文件
+img {
+  width: 320px;
+}
+```
+
+3. 大胆使用picture，当分辨率大于599px选择一个图片，小于600px，选择另一种小的，为避免存在599-600px之间的图片，img作为备用（不可删去，避免问题发生），
+
+```
+<picture>
+<source media="(max-width: 599px)" srcset="xxx.jpg">
+<source media="(min-width: 600px)" srcset="yyy".jpg">
+<img src="yyy.jpg" alt=" "/>
+</picture>
+```
+
+
 
 ## 表格
 
@@ -186,6 +290,85 @@ border边框宽度，cellpadding单元格边与内容宽度，cellspacing单元�
 </colgroup>
 一般col控制样式用上述形式，列为单位数
 ```
+
+## iframe
+
+```
+<iframe src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+```
+
+可用于引入其他网站的内容到自身网页上。
+
+allowfullscreen全屏模式，frameborder框架与其他框架之间的边框（不推荐），sanbox提高安全性，
+
+**使用javascript设置iframe的src可以尽快被使用，减少加载实践。**
+
+
+
+## 嵌入多媒体文件等
+
+### embed
+
+```
+<embed type="video/quicktime" src="xx.mov" width="640px" height="400px" />
+```
+
+### object
+
+```
+<object date="application/pdf" data="/xx.pdf" width="250px" height="200px">
+</object>
+```
+
+### audio 音频文件
+
+autoplay自动播放，controls提供控制面板，loop布尔属性，循环，preload
+
+volume音量设置0-1，
+
+```
+<audio autoplay>
+<source src="xxx.mp3" type="audio/mp3">
+<source src="xxx.ogg" type="audio/ogg">
+</audio>
+```
+
+### video 视频文件
+
+autoplay自动播放，loop循环播放，preload缓冲方式（none不缓冲，auto界面加载后缓存，metadata仅缓存文件元数据）
+
+```
+<video controls>
+<source src="xxx.mp4" type="video/mp4">
+<source src="xxx.webm" type="video/webm">
+</video>
+```
+
+### MIME类型
+
+即为嵌入元素的type。仅提供部分，
+
+* **音频与视频类**
+  * ogg：audio/ogg（仅有音频的ogg文件），video/ogg（包含视频/音频的文件），application/ogg（不指定内容的ogg文件）
+  * mp4：video/mp4，
+  * mp3：audio/mpeg
+  * wav：audio/wave，audio/wav，audio/x-wav，audio/x-pn-wav。
+  * flac：audio/flac，audio/x-flac
+  * avi：video/avi
+  * 等等
+
+* **图像类**
+  * image
+
+* **字体类**
+  * application/font-off、application/font-ttf等等，
+
+* **其他**
+  * zip，application/zip、appliication/x-gzip
+  * pdf，application/pdf
+  * JavaScript，text/javascript、application/javascript
+
+
 
 ## 其他
 
@@ -257,14 +440,30 @@ rel="icon"                      文档的外部资源
 **HTML5布局**
 
 ```
+<body>
 <header> <h1></h1> </header>          通常为介绍内容的头部，如文章的标题
-<nav></nav>                          大型导航链接块，类似于菜单栏
-<section> </section>              定义节，相当于带有主题的内容组
-<section> </secton> 
-<article></article>               相当于网站其他内容较为独立，例如博客文章、新闻
-<aside></aside>                   主内容之外内容，如侧栏，
-<footer> </footer>                页脚，作者、版权信息、联系信息等等
+<nav>		                          大型导航链接块，类似于菜单栏
+<form> </form>						  搜索栏
+</nav>
+<main>								主内容区
+<article>
+</article>
+<aside>
+</aside>
+</main>
+<footer> </footer>	                页脚，作者、版权信息、联系信息等等
+</body>
 ```
+
+内容块区
+
+```
+<section> </section>              定义节，相当于带有主题的内容组
+<article></article>               相当于网站其他内容较为独立，例如博客文章、新闻
+<aside></aside>					  主内容之外内容，如侧栏，
+```
+
+
 
 **推荐的标签**
 
@@ -314,7 +513,7 @@ address(联系人信息)
 * [顾轶灵](http://justineo.github.io/slideshows/semantic-html/#/)
 * [W3C](https://www.w3school.com.cn/index.html)
 
-
+* [MDN](https://developer.mozilla.org)
 
 
 
