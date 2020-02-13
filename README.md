@@ -4,7 +4,7 @@
 
 ## 零基础_task2
 
-这个目录存放了[零基础学院task2](http://ife.baidu.com/course/detail/id/36)关于个人简历的任务文件，task2_note.md为在这次任务中对HTML及其语义化的学习笔记。[效果1](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task2/task2_h.html)、[效果2](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task2/task2_table.html)。
+这个目录存放了[零基础学院task2](http://ife.baidu.com/course/detail/id/36)关于个人简历的任务文件，task2_note.md为在这次任务中对HTML及其语义化的学习笔记。[效果1](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task2/task2_h.html)、[效果2](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task2/task2_table.html)。
 
 ### 实现效果
 
@@ -13,7 +13,7 @@
 
 ## 零基础_task3
 
-这个目录存放了[零基础学院task3](http://ife.baidu.com/course/detail/id/37)关于在task2基础上用css增加色彩的任务文件，task3_note.md为本次任务对css简单的学习笔记，包括背景、文本、字体等简单应用。[效果](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task3/task3.html)
+这个目录存放了[零基础学院task3](http://ife.baidu.com/course/detail/id/37)关于在task2基础上用css增加色彩的任务文件，task3_note.md为本次任务对css简单的学习笔记，包括背景、文本、字体等简单应用。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task3/task3.html)
 
 ### 实现效果
 
@@ -21,7 +21,7 @@
 
 ## 零基础_task4
 
-这个目录存放了[零基础学院task4](http://ife.baidu.com/course/detail/id/38)关于在背景边框列表链接和选择器的任务文件，task4_note.md为本次对css链接、列表、边框、轮廓的学习笔记。[效果](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task4/task4.html)
+这个目录存放了[零基础学院task4](http://ife.baidu.com/course/detail/id/38)关于在背景边框列表链接和选择器的任务文件，task4_note.md为本次对css链接、列表、边框、轮廓的学习笔记。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task4/task4.html)
 
 ### 实现效果
 
@@ -29,10 +29,18 @@
 
 ## 零基础_task5
 
-这个目录存放了[零基础学院task5](http://ife.baidu.com/course/detail/id/40)关于三种简历的任务文件，task5_note.md是本次对CSS框模型、浮动、定位元素、透明度、简单伪类和微元素的学习笔记。[效果](https://fengwanling.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task5/resume.html)，由于~~懒而且不喜欢copy~~,所以默认只默认显示了第三种的简历，但是F12自己修改为2或者3查看其他两个样式的结果。
+这个目录存放了[零基础学院task5](http://ife.baidu.com/course/detail/id/40)关于三种简历的任务文件，task5_note.md是本次对CSS框模型、浮动、定位元素、透明度、简单伪类和微元素的学习笔记。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task5/resume.html)，由于~~懒而且不喜欢copy~~,所以默认只默认显示了第三种的简历，但是F12自己修改为2或者3查看其他两个样式的结果。
 
 ### 实现效果
 
 初步实现了不更改HTML文件的情况下修改CSS而能适用的情况，定义尺寸方面不足。
 
 原图样式太一般，加了个圆角，
+
+## 零基础_task6
+
+这个目录存放了[零基础学院task6](http://ife.baidu.com/course/detail/id/42)关于布局的任务文件，task6_note.md为对用户界面、弹性盒子等的学习笔记。[效果]([https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task6/task6.html)
+
+### 实现效果
+
+只是实现静态界面，并没有轮播图之类，等到后面再回来修改。
