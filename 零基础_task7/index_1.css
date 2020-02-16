@@ -1,0 +1,372 @@
+body {
+    font-family: Arial,sans-serif,serif;
+    background-color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    color: #8e8e8b;
+    font-size: 13px;
+    font-weight: 100;
+}
+body {
+    width: 1600px;
+    margin: 0 auto;
+}
+.contents {
+    color: #8e8e8b;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 200%;
+    letter-spacing: 2px;
+}
+a:hover, a:visited, a:link, a:active {
+    color: #919191;
+}
+a {
+    text-decoration: none;
+}
+/*header*/
+header {
+    background-image: url("images/account.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: aliceblue;
+    width: 100%;
+    height: 750px;
+    margin: 0 auto;
+    padding: 150px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+header article {
+    flex: 2 84px;
+    width: 970px;
+    margin: 40px auto;
+    padding: 0px;
+}
+header article:nth-of-type(3) {
+    flex: 5 250px;
+    border: 1px solid;
+    border-color: #5a5751;
+    margin: 40px auto;
+    padding: 50px;
+}
+.header_title {
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 100;
+    color: #ffffff;
+    width: 450px;
+    margin: 0 auto;
+}
+
+.account p{
+    line-height: 3;
+}
+.account_account input,button {
+    height: 50px;
+    background: none;
+    border: 1px solid #777269;
+    margin: 45px 15px;
+}
+input {
+    width: 270px;
+    color: white;
+    padding-left: 21px;
+    margin-right: 30px;
+}
+.account_account button {
+    width: 125px;
+    background-color: white;
+    color: black;
+}
+
+/*intro*/
+
+.intro {
+    width: 1200px;
+    height: 540px;
+    color: #a9a9a9;
+    margin: 85px auto;
+}
+.intro article {
+    margin-bottom: 65px; 
+}
+.intro>article>p:first-child {
+    display: block;
+    margin: 40px auto;
+}
+.article_title {
+    width: auto;
+    font-size: 29px;
+    margin: 0 auto;
+    color: black;
+    font-weight: 100;
+    text-align: center;
+}
+.intro section {
+    width: 100%;
+    height: 385px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.intro section article {
+    flex: 1 330px;
+    margin: 20px 130px;
+    height: 130px;
+}
+.intro article:nth-of-type(4) {
+    flex: 1 330px;
+}
+.bold {
+    font-size: 20px;
+    color: black;
+    line-height: 50px;
+}
+.float {
+    float: left;
+    margin: 10px 25px auto auto;
+    height: 85px
+}
+
+/*policies*/
+
+.policies {
+    height: 600px;
+    background-image: url("images/policies.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 100px 0 100px 175px;
+}
+.policies_left {
+    width: 500px;
+    height: 440px;
+    float: left;
+    padding: 80px 140px;
+}
+.policies_article {
+    height: 320px;
+    margin-bottom: 60px;
+    float: left;
+}
+.policies_button {
+    width: 500px;
+    height: 60px;
+}
+.policies_button button {
+    width: 240px;
+    height: 60px;
+    border: 1px solid #5a5751;
+    padding: 0px;
+    margin: 0;
+    float: left;
+}
+.policies_button button:first-child {
+    margin-right: 20px;
+}
+.policies_right {
+    width: 643px;
+    height: 598px;
+    float: left;
+    clear: right;
+    border: 1px solid #5a5751;
+    border-radius: 50px 0px 0px 50px;
+    position: relative;
+}
+.policies_ipad {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+.circle {
+    border: 1px solid #5a5751;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 295px;
+}
+/*after*/
+.after {
+    width: 1060px;
+    margin: 100px auto;
+}
+.after section {
+    display: flex;
+    flex-flow: row wrap;
+}
+.after section .Product_article {
+    flex: 1 270px;
+    margin: 30px 20px;
+    text-align: center;
+}
+.illu section {
+    margin-top: 60px;
+}
+section .photo_article {
+    flex: 1 100px;
+    padding: 80px 45px 30px 45px;
+    width: 570px;
+}
+section .photo {
+    flex: 1 100px;
+    padding: 40px 45px;
+}
+
+/*crew*/
+
+.crew_top {
+    padding: 90px 175px 30px 175px;
+}
+.crew > section {
+    margin: 15px 30px;
+    position: relative;
+}
+.after > section > article {
+    flex: 1 100px;
+    margin: 14px 14px;
+    position: relative;
+    height: 380px;
+}
+.crew_contents {
+    height: auto;
+    width: 220px;
+    padding: 15px 15px;
+    margin: 90px 110px;
+}
+.crew_contents p {
+    display: block;
+    margin: 10px auto;
+    padding: 0px;
+    text-align: center;
+}
+.crew_link {
+    display: flex;
+    margin: 0 auto;
+}
+.link_circle{
+    flex: 1 10px;
+    border: 1px solid #5a5751;
+    border-radius: 50%;
+    margin: 25px 15px 0px 15px;
+}
+.crew > section > article > img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    opacity: 1;
+    background-color: blueviolet;
+}
+img.a:hover {
+    display: block;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/*contacts*/
+
+.contacts {
+    padding: 0 44px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contacts_left {
+    height: 500px;
+    flex: 1 100px;
+    padding: 30px;
+    border: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: column;
+}
+.contacts_left p, input, button {
+    margin: 15px auto;
+    flex: 1 10px;
+    height: 50px;
+}
+.contacts_left input, button {
+    background: none;
+    border: 1px solid #777269;
+    color: black;
+}
+.contacts_left input:nth-of-type(3) {
+    flex: 3 30px;
+    padding-top: 0px;
+}
+.contacts_left button {
+    width: 60%;
+    background-color: black;
+    color: white;
+}
+.contacts_right {
+    flex: 1 110px;
+    padding: 80px 100px 80px 130px;
+}
+.contacts_top {
+    margin: 40px 0;
+    padding: 0px;
+}
+.contacts_top p:nth-of-type(2) {
+    display: block;
+    margin-top: 40px;
+}
+.contacts_link {
+    margin: 70px 0px 30px 0;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.contacts_link > article > div:nth-of-type(2) {
+    padding-top: 10px;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    background-color: black;
+    height: 410px;
+    color: white;
+}
+footer section {
+    display: flex;
+    flex-direction: row;
+    padding: 80px 215px;
+}
+footer > section > article {
+    flex: 3 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+footer > section > article:nth-of-type(4) {
+    flex: 5 50px;
+}
+footer_title {
+    font-size: 16px;
+}
+footer > section > article > div {
+    flex: 1 10px;
+    padding: 16px 0px;
+}
+footer_article {
+    font-size: 12px;
+}
+footer_link {
+    display: flex;
+    flex-direction: column;
+}
+.link_icon {
+    margin: 10px;
+    flex: 1 5px;
+}

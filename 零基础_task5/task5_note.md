@@ -37,6 +37,8 @@ ul {float: left; clear: both;}      可用来控制浮动，clear可有left、ri
 
 **清除浮动**
 
+* 如上，``clear:both``清楚浮动，none允许两边都有浮动，both都不运行有浮动，left不允许左边有浮动。
+
 * clearfix hack清除浮动，块之间一致。（IE6只需zoom:1;）
 
 ```
@@ -185,3 +187,4 @@ img.hover {opacity: 1.0; filter: alpha(opacity=100);}
 
 
 
+a

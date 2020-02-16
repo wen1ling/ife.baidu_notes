@@ -141,7 +141,7 @@ p {direction: rtl;}
 
 #### 行间距line-height
 
-可用数字、百分比等，
+可用数字、百分比等，数字可以等倍增大
 
 ```
 p {line-height: 100%;}
