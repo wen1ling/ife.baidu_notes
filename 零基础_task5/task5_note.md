@@ -1,5 +1,9 @@
 # CSS
 
+##基础
+
+首先元素总体上分为**块级元素**和**内联元素**，默认情况块级内容宽度是父元素100%，并内容一样高，可以根据盒模型（参考下面）布置，而内联元素宽高根据内容而定，可以通过``diplay:``进行转换。正常的布局流，块级元素垂直布局，内联元素在足够的父块级宽度会在同一行布局，如果没有空间会移到新行。
+
 ## 盒模型
 
 如W3C图，规定了内外边距、边框以及元素宽高的方式。
@@ -9,16 +13,17 @@
 **内边距padding**，可按照上、右、下、左的顺序设置内边距，也可统一设置。
 
 ```
-h1 {padding: 10px 10px 10px 10px;}
-h1 {padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;}
+div {padding: 10px 10px 10px 10px;}
+div {padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;}
 ```
 
-**外边距margin**，和内边距padding一样，可简写可分别设置。外边距存在合并的设置，当两者垂直外边距相遇时，将只会显示一个外边距，而其高度为要合并的两者较大者。在存在外边距margin的地方，不论是何种位置，均会合并。但是行内框、浮动框或相对定位不会存在合并。
+**外边距margin**，和内边距padding一样，可简写可分别设置。
 
-**块状盒子和行内盒子**：
+**外边距折叠**：当两个块级外边距相邻的边宽/高一致时，两者之间仅留外边距较大者，（但是行内框、浮动框或相对定位不会存在合并）
 
-* 行内盒子：盒子不会换行，width、height不会起作用，margin、padding、border起作用但是不会分离其他行内盒子。
-* 块状盒子：盒子占用父容器所有空间，会换行，width、height起作用，padding、margin、border会把其他元素与当前盒子分离。
+**外边距折叠解决方法**：``overflow: hidden``
+
+
 
 ## 浮动布局float
 
@@ -79,6 +84,8 @@ section {margin-left: 25%;}
 ```
 h2 {position: absolute; left: 100px; top: 150px;}
 ```
+
+**值得注意的是，如果父元素未定义，即为static，绝对定位会被包含到初始块，相当于以浏览器定位。**
 
 * absolute的clip属性。
 
