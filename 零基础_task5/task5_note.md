@@ -76,9 +76,8 @@ section {margin-left: 25%;}
 分为几种类型。
 
 * static：静态定位，并没有变化，放入正常的文档流。
-
 * absolute：绝对定位，相对于最近的父元素，left、top、right、bottom。
-* fixed：绝对定位，相对于浏览器窗口定位，left、top、right、bottom。
+* fixed：固定定位，相对于浏览器窗口定位，left、top、right、bottom。
 * relative：相对定位，left等等。
 
 ```
@@ -99,7 +98,7 @@ img {position: absolute; clip: rect(0px,60px,200px;0px);}
 img {position: absolute; left: 0px; z-index: -1;}
 ```
 
-* 特别的，黏性定位，在元素跨越某个值前为相对定位，跨越后为固定定位。
+* 特别的，黏性定位，在元素跨越某个值前为相对定位，跨越后为固定定位。[MDN例子](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html)
 
 ```
 #one {position: sticky; top: 10px;}
@@ -108,6 +107,8 @@ img {position: absolute; left: 0px; z-index: -1;}
 
 
 ## display
+
+[全部元素布局类型](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
 转换元素的框的类型。
 
@@ -118,7 +119,7 @@ span {display: block;}         转化为块级元素。
 
 * none：元素不显示。
 * block：显示为块级元素，前后有换行符。
-* inline：默认。内联元素。
+* inline：默认，内联元素。
 * table：块级表格。
 * inline-block、list-item、inline-table等等。
 
@@ -134,8 +135,8 @@ span {display: block;}         转化为块级元素。
 * :active，被选择的元素，点击元素到响应的时间
 * :focus，拥有键盘焦点的元素，如文本框输入数据时
 * :first-child，元素的第一个子元素添加样式
-
 * :lang，为指定lang属性的元素添加样式。
+* nth-of-type(x)，对某元素第x个附加定义
 
 ```
 q:lang(no) {quotes: "~" "~"}
@@ -168,19 +169,11 @@ img.hover {opacity: 1.0; filter: alpha(opacity=100);}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+> [MDN文档流]([https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/%E5%AE%9A%E4%BD%8D](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/定位))
+>
+> [W3C](https://www.w3school.com.cn/css/index.asp)
+>
+> [CSS布局learnlayout](http://zh.learnlayout.com/)
 
 
 

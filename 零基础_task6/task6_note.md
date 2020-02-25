@@ -1,10 +1,12 @@
 # 布局
 
+_典型案例_
+
 ## 基础
 
+默认布局是流动型，每个块从上一个块的新行排列，与块级元素本身定义有关，之后可以通过浮动(float)、定位(position)、z-index进行布局
 
-
-## 用户界面
+## 部分知识
 
 ### 溢出overflow
 
@@ -42,9 +44,7 @@ div {outline: 1px solid black; outline-offset:10px;}
 
 
 
-## 布局
-
-
+## 布局实战
 
 ### 消息盒子
 
@@ -58,11 +58,11 @@ div {outline: 1px solid black; outline-offset:10px;}
 
 **CSS**：CSS先字体、border-box边框盒，去外内边距等日常操作，然后从外而内、从上往下设置，总框设置宽高，tab位内的li使用浮动并设置好宽度。为可以跳转使用链接方式，并为inline-block布局，(记得清除浮动)，内容位外层设置高度以及绝对定位即可，具体的article为相对定位，
 
-### 滑动隐藏的侧边栏
+### [滑动隐藏的侧边栏](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)
 
 #### label与input
 
-label表示用户界面某个元素的说明，通过label的for与input的id属性进行联用，也可以将input直接放label里面，
+label表示用户界面某个元素的说明，通过label的for与input的id属性进行联用，也可以将input直接放label里面。
 
 ```
 <label for="text">123</label>
@@ -88,16 +88,16 @@ div:hover{width:200px; height:200px; transform:rotate(180deg)};
 
 * transition-delay：开始前的等待时间。
 
-滑动隐藏的侧边栏即为checkbox hack技术，通过label和input及css即可提供无JavaScript的方法控制元素，
+滑动隐藏的侧边栏即为**checkbox hack**技术，通过label和input及css即可提供无JavaScript的方法控制元素，
 
 可用css隐藏复选框，通过绝对定位或者透明度为0，HTML使用label与input的联合用法，CSS设置为：
 
 ```
-label[for=" "]{position:absolute; top:4px; right:5px; z-index:1; cursor: pointer; }
+label[for="text"]{position:absolute; top:4px; right:5px; z-index:1; cursor: pointer; }
 input[type="checkbox"]{position:absolute; top:-100px;}
 ```
 
-滑动面板
+**滑动面板**
 
 ```
 aside{background: ; color: ; width: ; height: ; padding: ; position:fixed; top:0px; right:-370px; transition: 0.6s all;}
@@ -115,9 +115,11 @@ input[type=checkbox]:checked+aside {right:0px;}
 aside:hover{margin-right:340px;}
 ```
 
-### 弹性盒子
+## 弹性盒子
 
-#### flex
+值得一提的是，对于需要兼容部分旧版本的浏览器，弹性盒子可能不太适合。[flexbox新的语法](https://css-tricks.com/old-flexbox-and-new-flexbox/)
+
+#### flexbox
 
 ![flex](flex.jpg)
 
@@ -153,18 +155,39 @@ article:nth-of-type(3){flex: 2 400px;}
 首先分配200px空间，然后按比例分配，如果起始空间大，则按比例削减。
 
 * 数值写法：单值可为宽度值/无单位数，双值第一个为无单位数，第二个为无单位/宽度值，三值为无单位数、无单位数、宽度值。
-
 * 对齐方式：align-items控制交叉轴（flex-start轴起点，flex-end轴终点，center居中，left、right、stretch等等），justify-content控制flex在主轴位置（start、flex-start、flex-end、center、left、right、space-between、space-around等等）。
 * 排序oreder：默认会按order增量排序，从小到大。
 * 可嵌套。
+* 如果需要盒子高度自动，可以设置``align-items: flex-start;``
 
-### appearance
+flexbox极其简单的居中布局``display: flex; align-items: center; justify-content: center``。
+
+## 响应式布局
+
+通过获取浏览器窗口大小来做响应式布局。[媒体查询](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+```
+@media screen and (min-width:600px) {
+nav {
+    float: left;
+    width: 25%;
+    }
+section {
+    margin-left: 25%;
+    	}
+}
+@media screen and (max-width:599px) {
+nav li {
+    display: inline;
+       }
+}
+```
+
+
 
 ## 一些布局细节
 
-* display可用很多用于控制布局的属性，可以大致分为块级元素和行内元素。全部详见[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
-
-li改为inline制作成水平菜单。
+* li改为inline制作成水平菜单。
 
 * 居中与小窗口问题
   * marign:0 auto;常用的水平居中方式，通过占据指定的width，剩下的宽度一分为二为左右外边距。
@@ -175,8 +198,8 @@ li改为inline制作成水平菜单。
 不再计算，采用box-sizing的属性，设置box-sizing:border-box时内外边距不会增加宽度了，也可以全局使用。（记得加上-webkit-  -moz-box- 来去使用旧版本的浏览器。）
 
 * position定位与float浮动见[task5_note](https://github.com/wen1ling/ife.baidu_notes/blob/master/%E9%9B%B6%E5%9F%BA%E7%A1%80_task5/task5_note.md)
-* inline-block行内块，vertical-align会影响它，值设置为top，需要设置某一列宽度，元素之间有空格，列之间会有空隙。
 * float：设置后的会脱离文档流，实现图片的文字环绕
+* ``display: inline-block``可以代替float实现可能需要的多个块的要求，inline-block行内块，vertical-align会影响它，值设置为top，需要设置某一列宽度，元素之间有空格，列之间会有空隙。
 
 **较为新的一些样式**
 
@@ -190,17 +213,11 @@ li改为inline制作成水平菜单。
 
 计算规则：+、-、*、/，可以混用单位，+、-时前后必须有空格，其他建议，版本要求较高，须加浏览器识别符。
 
+## 更多布局问题
 
+### float
 
-## 布局模型
-
-**一些补充**。三种不同的布局模型：流动模型（flow）、浮动模型（float）、层模型（layer）。
-
-1. 流动模型：默认类型，块状元素至上而下顺序垂直延伸分布（块状元素默认100%），即每个元素以行的形式占据。行内元素则从左到右水平分布显示。
-2. 浮动模型：float方式。
-3. 层模型：position定位的方式，多用相对定位relative、绝对定位absolute、固定定位fixed。
-
-* z-index：仅对定位元素起作用，父级失效或同级定义起作用，未定义时定位覆盖未定位。
+* 设置float的元素会脱离文档流，即脱离本身所在的块，但是会对内容紧凑。
 
 ### 布局方式
 
@@ -218,9 +235,13 @@ li改为inline制作成水平菜单。
 
 
 
+> [MDN布局](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
 
 
-> [MDN文档流]([https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/%E5%AE%9A%E4%BD%8D](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/定位))
+
+
+
+
 
 
 
