@@ -1,0 +1,16 @@
+body {
+    font-family: Arial,sans-serif,serif;
+    background-color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    color: #8e8e8b;
+    font-size: 13px;
+    font-weight: 100;
+}
