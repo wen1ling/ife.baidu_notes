@@ -158,6 +158,8 @@ grid参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid)、[阮
 
 ## 三列式
 
+https://github.com/zwwill/blog/issues/11
+
 ### 圣杯(Holy Grail)
 
 HTML不具体写了，main大框架，center、left、right子div，class属性都为column。
@@ -198,9 +200,11 @@ HTML不具体写了，main大框架，center、left、right子div，class属性�
 
 ### 双飞翼
 
+大体思路与圣杯一致，中间不同，HTML方面双飞翼增加div包裹main中间部分，CSS方面双飞翼使用margin，圣杯使用padding，而后双飞翼无须相对布局。
+
 ### float
 
-较为基础，懒得写了
+较为基础，懒得写了，局限性很大，圣杯和双飞翼实现了先解析中间然后两边的问题。
 
 
 
