@@ -1,0 +1,49 @@
+body {
+    font-family: Arial,sans-serif,serif;
+    background-color: rgba(121, 119, 169, 0.70);
+}
+div.h1 {
+    color:#248fa7;
+    background-color: #e6911b;
+    border: 2px solid #1e1d13;
+    border-radius: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px;
+}
+img[title="my avatar"] {
+    height: 150px;
+    width: 150px;
+    border: 5px solid #114a75;
+    border-radius: 100px;
+}
+.img {
+    text-align: center;
+}
+h2,p{
+    text-align: center;
+}
+section {
+    margin: 50px;
+}
+article {
+    width: 350px;
+    height: 350px;
+    background-color: #248fa7;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 5px gray;
+    float: left;
+    margin: 50px;
+    padding: 10px;
+}
+h2 {
+    color: #1aae6f;
+}
+footer {
+    margin: 100px;
+    clear: both;
+}
+div.author {
+    text-align: center;
+}
