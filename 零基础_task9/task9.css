@@ -47,3 +47,12 @@ footer {
 div.author {
     text-align: center;
 }
+
+#color {
+    color: black;
+    width: 200px;
+    height: 50px;
+    background-color: blanchedalmond;
+    border-radius: 25px;
+    
+}

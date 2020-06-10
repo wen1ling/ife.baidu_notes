@@ -61,7 +61,7 @@
 
 **第九天到第十一天：来做一个漂亮的网站**
 
-这个目录存放了[零基础学院task7](http://ife.baidu.com/course/detail/id/43)关于复杂页面布局的任务文件，task6_note.md为对用户界面、弹性盒子等的学习笔记。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task7/index.html)，切片掌握，对于布局方式有了一定能力
+这个目录存放了[零基础学院task7](http://ife.baidu.com/course/detail/id/43)关于复杂页面布局的任务文件，task7_note.md是对目前主流布局（包括两列式和三列式）的学习笔记。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task7/index.html)，切片掌握，对于布局方式有了一定能力
 
 ### 实现效果
 
@@ -71,8 +71,18 @@
 
 **第十二天到第十五天，复杂页面实现**
 
-这个目录存放了[零基础学院task8](http://ife.baidu.com/course/detail/id/44)关于复杂页面布局的任务文件，task6_note.md为对用户界面、弹性盒子等的学习笔记。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task8/index.html)，对于布局有了很不错的理解。
+这个目录存放了[零基础学院task8](http://ife.baidu.com/course/detail/id/44)关于复杂页面布局的任务文件，task8_note.md为对布局最后的一些归纳的学习笔记。[效果](https://www.notwiner.top/ife.baidu_notes/%E9%9B%B6%E5%9F%BA%E7%A1%80_task8/index.html)，对于布局有了很不错的理解。
 
 ### 实现效果
 
 总体是按照要求做的，部分有所改动（~~因为电脑分辨率和提供psd不一样~~），先分左边两边，进行两栏式布局，然后分别再进行两栏式布局，效果还算不错，但手机观感不是很好，因为大框架左边是固定宽度。值得一提的是很多可以css实现的都未用图标所代替。~~鼠标经过图片的css未做完~~。（官网维护，可以先休息几天了）
+
+## 零基础_task9
+
+**第十六天，开始感受JS的乐趣**
+
+这个任务来源于[零基础学院task9](http://ife.baidu.com/course/detail/id/45)，关于js的初步使用，task9_note.md是对JavaScript最基本的语法（包括变量、运算符、输出、语句、函数和事件）的学习笔记，[运算](https://www.notwiner.top/ife.baidu_notes/零基础_task9/operation.html)是js对加减乘除的简单运算页面，[个人简历](https://www.notwiner.top/ife.baidu_notes/零基础_taks9/task9.html)是对在零基础taks_4的基础是进行修改而成的。
+
+### 实现效果
+
+加减乘除较为简单，不再赘述，而个人简历增加了随机背景颜色生成。
