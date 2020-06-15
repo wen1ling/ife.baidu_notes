@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+        //dec2bin将十进制转化为二进制
+        function dec2bin() {
+            decNumber = document.getElementById("dec-number").value;
+            let b, d = '';
+            if (isInt(decNumber)) {
+                while (decNumber != 0) {
+                b = decNumber % 2;
+                decNumber = (decNumber - decNumber % 2) / 2;
+                d += String(b);
+                }
+                d = reverse(d);
+                d = binLength(d);
+                document.getElementById("result").innerHTML += "\n\n" + d;
+            } else {
+                console.log("请输入数字!!!")
+            }
+
+        }
+        //isInt判断是否为正整数
+        function isInt(a) {
+            if (!isNaN(a) && a >= 0 && a % 1 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        //reverse用来反转数字
+        function reverse(b) {
+            d = b.split("").reverse().join("");
+            return d;
+        }
+        //根据bin-bit调整输出二进制的位数
+        function binLength(c) {
+            binBit = document.getElementById("bin-bit").value;
+            if (binBit >= String(c).length) {
+                differ = binBit - String(c).length;
+                c = reverse(c);
+                for (differ; differ != 0; differ--) {
+                    c += '0';
+                }
+                c = reverse(c);
+                return c;
+            } else {
+                console.log("输入二进制位数过小！！！！");
+            }
+            return c;
+        }
+        let btn = document.getElementById('trans-btn');
+        btn.onclick = dec2bin;
+        //document.getElementById('trans-btn').onclick;
+    </script>
+</body>
+</html>

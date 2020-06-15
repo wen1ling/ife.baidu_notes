@@ -1,0 +1,34 @@
+body {
+    background-color: cornsilk;
+}
+
+
+#hello {
+    font-size: 34px;
+    text-align: center;
+    color: #ffc107;
+}
+main {
+    text-align: center;
+}
+#result1 {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tables,.newTr,.newTd {
+    border: 1px solid black;
+    height: 80px;
+    background-color: #eae3ae36;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.newTd {
+    width: 80px;
+    text-align: center;
+    vertical-align: middle;
+}

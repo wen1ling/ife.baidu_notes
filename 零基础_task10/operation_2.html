@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <!-- <input id="first-number" value="0"> -->
+    <!-- <input id="second-number" value="0"> -->
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        function isNumber(a) {
+            if (isNaN(a)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        function notZero(b) {
+            if (isNumber(b) && b != 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        document.getElementById('add-btn').onclick = function() {
+            let a = parseInt(document.getElementById('first-number').value);
+            b = parseInt(document.getElementById('second-number').value);
+            if (isNumber(a) && isNumber(b)) {
+                document.getElementById('result').innerHTML += '\n\n' + (a + b);
+            } else {
+                console.log("请输入数字");
+            }
+        }
+        document.getElementById('minus-btn').onclick = function() {
+            let a = document.getElementById('first-number').value;
+            b = document.getElementById('second-number').value;
+            if (isNumber(a) && isNumber(b)) {
+                document.getElementById('result').innerHTML += '\n\n' + (a - b);
+            } else {
+                console.log("请输入数字");
+            }
+        }
+        document.getElementById('times-btn').onclick = function() {
+            let a = document.getElementById('first-number').value;
+            b = document.getElementById('second-number').value;
+            if (isNumber(a) && isNumber(b)) {
+                document.getElementById('result').innerHTML += '\n\n' + (a * b);
+            } else {
+                console.log("请输入数字");
+            }
+        }
+        document.getElementById('divide-btn').onclick = function() {
+            let a = document.getElementById('first-number').value;
+            b = document.getElementById('second-number').value;
+            if (isNumber(a) && notZero(b)) {
+                document.getElementById('result').innerHTML += '\n\n' + (a / b);
+            } else if (isNaN(b) || isNaN(a)){
+                console.log("请输入数字");
+            } else {
+                console.log("被除数不能为0!!!");
+            }
+        }
+    </script>
+</body>
+</html>

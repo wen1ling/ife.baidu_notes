@@ -81,8 +81,30 @@
 
 **第十六天，开始感受JS的乐趣**
 
-这个任务来源于[零基础学院task9](http://ife.baidu.com/course/detail/id/45)，关于js的初步使用，task9_note.md是对JavaScript最基本的语法（包括变量、运算符、输出、语句、函数和事件）的学习笔记，[运算](https://www.notwiner.top/ife.baidu_notes/零基础_task9/operation.html)是js对加减乘除的简单运算页面，[个人简历](https://www.notwiner.top/ife.baidu_notes/零基础_taks9/task9.html)是对在零基础taks_4的基础是进行修改而成的。
+这个任务来源于[零基础学院task9](http://ife.baidu.com/course/detail/id/45)，关于js的初步使用，task9_note.md是对JavaScript最基本的语法（包括变量、运算符、输出、语句、函数和事件）的学习笔记，[运算](https://www.notwiner.top/ife.baidu_notes/零基础_task9/operation.html)是js对加减乘除的简单运算页面，[个人简历](https://www.notwiner.top/ife.baidu_notes/零基础_task9/index.html)是对在零基础taks_4的基础是进行修改而成的。
 
 ### 实现效果
 
 加减乘除较为简单，不再赘述，而个人简历增加了随机背景颜色生成。
+
+
+
+## 零基础_task10
+
+**第十七天到第十八天，“如果”可以“重来”**
+
+这个任务来源于[零基础学院task9](http://ife.baidu.com/course/detail/id/46)，关于js的初步使用，task10_note.md是对JavaScript基础第二部分（包括数据类型、对象、DOM和一些常用库）的学习笔记，[运算](https://www.notwiner.top/ife.baidu_notes/零基础_task10/operation_2.html)是基于task9改进的，[dec2bin](https://www.notwiner.top/ife.baidu_notes/零基础_task10/dec2bin.html)是10进制转二进制的应用。[编码练习](https://www.notwiner.top/ife.baidu_notes/零基础_task10/index.html)是包括三个任务点（根据时间打招呼、3的小游戏和乘法表）。
+
+### 实现效果
+
+运算毕竟简单，不再赘述，
+
+* **dec2bin**是要求十进制转二进制，网上大多使用``int>>>1``的方式解决，而既然是为了编码练习，就换了一种方式，通过通用算法，不断除2拿到余数形成的数字，由于与实际二进制位置颠倒，采用转化数组再用``reverse``反转数组再转回String类型，即可得到结果，当然在步骤中不乏有判断正整数、反转数字、固定位数等函数。
+* ``index.html``则是任务练习的最后三个汇总，前两个都比较简单，不再赘述，最后一个题目要求是九九乘法表，但是js做有点大材小用，于是参考前面的产生了根据输入然后生成乘法表的想法。html写table标签即可，js根据输入数据先在table标签生成需要数量的tr，再在tr下生成td，在tr下生成td较为麻烦，需要两个循环；这样表格生成完成，但是样式过丑，选择了在生成td时候加上``className``属性，这样再写个css文件算是较为完美。
+
+当然，这次作业也有瑕疵，js生成的html内容在连续点击会在后面继续生成，相当于多次调用事件生成函数，观看其他大佬作品，有的选择通过将生产内容内嵌到某一标签，这样即使再次生成用户也不会有感觉，但感觉不算太完美，所以
+
+
+
+
+
