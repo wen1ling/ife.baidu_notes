@@ -175,22 +175,11 @@ document.querySelectorAll("element.className");			//通过查找CSS选择器的�
 //使用这种方法根据选择器进行修改，如id用element#className
 ```
 
-对于多个匹配结果数组返回可以用下面对n进行修改进行索引。
+对于多个匹配结果可以用下面对n进行修改进行索引。
 
 ```
 let x = document.querySelectorAll(xxx.xx);
 console.log(x[n].innerHTML);
-```
-
-``document.querySelector("")``只能返回一个结果，所以推荐用于行内元素返回。
-
-对于多个返回结果，其内还可以通过这样的方式筛选。以``querySelectorAll``举例。
-
-```
-document.querySelectorAll("li > a.active")		
-//筛选li标签下a标签class属性为active的内容
-document.querySelectorAll("input[name='login']");
-//筛选<input name="login"/>的标签
 ```
 
 
@@ -235,6 +224,8 @@ test2.insertBefore(test1, test2);
 
 
 
+
+
 **node**
 
 ```
@@ -259,9 +250,7 @@ let test = document.getElementById("test").childNodes[0].nodeValue;
 
 
 
-**总结**
 
-``querySelectorAll``和``getElementsxxx``用法相似，``element.length``获取元素组成的数组数量，方便后面进行for循环批量输出，``element.innerHTML``输出文本，对于较多的在element后加上中括号指明第几个，类似的还有``element.className``改变class属性值等等。
 
 
 

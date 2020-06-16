@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <div id="wrapper">
+        <div id="news-top" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>JS</span><a class="active" href="">Some Link2</a></li>
+                    <li><span>CSS</span><a href="">Some Link3</a></li>
+                    <li><span>JS</span><a href="">Some Link4</a></li>
+                </ul>
+            </div>
+            <img src="">
+            <p class="">Some Text</p>
+        </div>
+        <div id="news-normal" class="section">
+            <h3>Some title</h3>
+            <div class="content">
+                <ul>
+                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>HTML</span><a href="">Some Link2</a></li>
+                    <li><span>JS</span><a class="active" href="#">Some Link3</a></li>
+                    <li><span>CSS</span><a href="">Some Link4</a></li>
+                </ul>
+            </div>
+            <img src="">
+            <p class="">Some Text</p>
+        </div>      
+    </div>
+    <script>
+
+    function getAllListItem() {
+        n = document.querySelectorAll("li");
+        for (i=0;i <= (n.length - 1);i++) {
+            console.log(n[i]);
+        }
+    }
+
+    function findAllHtmlSpanInOneSection(sectionId) {
+        n = document.querySelectorAll(".section span");
+        for (i=0;i <= (n.length - 1);i++) {
+            if (n[i].innerHTML == "HTML") {
+                console.log(n[i]);
+            }
+        }
+    }
+
+    function findListItem(sectionId,spanCont) {
+        n = document.querySelectorAll(".section li");
+        for (i=0;i <= (n.length - 1);i++) {
+            if (n[i].querySelector("span").innerHTML == spanCont) {
+                console.log(n[i]);
+            }
+        }
+    }
+
+    function getActiveLinkContent(sectionId) {
+        n = document.querySelectorAll(".section .active");
+        for (i=0;i <= (n.length - 1);i++) {
+            console.log(n[i].innerHTML);
+        }
+    }
+
+    </script>
+</body>
+</html>
